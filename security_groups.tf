@@ -11,7 +11,7 @@ resource "aws_security_group" "bastion_host_sg" {
  tags={
     Name="bastion_host_sg"
   }
- }
+ 
 
   egress {
     description = "Allows access to the world"
@@ -20,3 +20,4 @@ resource "aws_security_group" "bastion_host_sg" {
     protocol    = "-1" # TCP + UDP
     cidr_blocks = ["0.0.0.0/0"]
   }
+}

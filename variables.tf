@@ -13,8 +13,7 @@ variable "vpc_name" {
   type        = string
 }
 
-variable "kibana_subnet_name" {
-  description = "name of the ELK subnet"
+variable "bastion_host_subnet_name" {
   type        = string
 }
 
