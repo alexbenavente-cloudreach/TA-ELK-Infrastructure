@@ -1,28 +1,37 @@
+# DEFINING ALL VARIABLES
 variable "aws_owner_id" {
-  description = "the account has the owner id of the AMI for Amazon linux"
+  description = "Contains the Owner ID of the ami"
   type        = string
 }
 
 variable "aws_ami_name" {
-  description = "name of the ami wanted for the project"
+  description = "Name of the ami I want for my project"
   type        = string
 }
 
-variable "vpc_name" {
-  description = "name of the vpc wanted for the project"
+variable "aws_vpc_name" {
+  description = "Name of the vpc of the project"
   type        = string
 }
 
-variable "bastion_host_subnet_name" {
+variable "ec2_type" {
+  description = "Type of ec2 instance"
   type        = string
+  default     = "t3.micro"
 }
 
+variable "public_subnet_name" {
+  type = string
+}
+
+variable "private_subnet_name" {
+  type = string
+}
 
 variable "my_keypair" {
-  default = "aws_keypair"
+  default = "elk_keypair"
 }
 
-
 variable "number_of_instances" {
-  description = "Amount of instances for my subnets"
+  description = "Number of instances"
 }

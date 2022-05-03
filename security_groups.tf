@@ -3,15 +3,15 @@ resource "aws_security_group" "bastion_host_sg" {
 
   ingress {
     description = "Allows SSH into Bastion Host"
-    cidr_blocks = [ "0.0.0.0/0" ]
-    from_port = 22
-    protocol = "tcp"
-    to_port = 22
+    cidr_blocks = ["0.0.0.0/0"]
+    from_port   = 22
+    protocol    = "tcp"
+    to_port     = 22
   }
- tags={
-    Name="bastion_host_sg"
+  tags = {
+    Name = "bastion_host_sg"
   }
- 
+
 
   egress {
     description = "Allows access to the world"
