@@ -20,8 +20,4 @@ resource "aws_security_group" "bastion_host_sg" {
     protocol    = "-1" # TCP + UDP
     cidr_blocks = ["0.0.0.0/0"]
   }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 8439d14 (merging branches)

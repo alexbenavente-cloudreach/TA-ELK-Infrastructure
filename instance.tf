@@ -10,3 +10,12 @@ resource "aws_instance" "bastion_host" {
     Name = "elk1-bastionhost"
   }
 }
+
+resource "aws_eip" "bastion_eip" {
+  vpc = true
+}
+
+resource "aws_eip_association" "eip_assoc" {
+  instance_id   = aws_instance.bastion_host.id
+  allocation_id = aws_eip.bastion_eip.id
+}
